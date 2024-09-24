@@ -89,7 +89,7 @@ const Todos = () => {
                             Update
                         </button> 
                         <button  className='mt-4 mb-4 mr-6 p-3 ml-4 border rounded-lg bg-blue-600 text-white-200' onClick={() => toggleTodoStatus(todo._id, todo.completed)}>
-                            {todo.completed ? 'completed' : 'pending'}
+                            {todo.completed ? 'completed' : 'Mark As Complete'}
                         </button>
                     </li>
                 ))}
