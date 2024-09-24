@@ -67,7 +67,7 @@ const Todos = () => {
 
            
             <input 
-            className='ml-72 border rounded-md m-12 w-64 h-12 border-black '
+            className='ml-64  border rounded-md m-12 w-96 h-12 border-black '
                 type="text"
                 value={newTodo}
                 onChange={(e) => setNewTodo(e.target.value)}
@@ -78,17 +78,17 @@ const Todos = () => {
           
             <ul className='flex flex-wrap m-16 gap-12 '> 
                 {todos.map((todo) => (
-                    <li key={todo._id} className='border border-black bg-slate-100  '>
+                    <li key={todo._id}  className='border border-black bg-slate-100  '>
                         <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
                             {todo.title}
                         </span>
-                        <h4 className='border border-b-4-black bg-white' > 
+                        <h4 className='border border-b-4-black bg-white ml-2' > 
                            TODO_TITLE: {todo.description} </h4>
-                        <button  className='ml-6 mt-4 mb-4 p-3 bg-yellow-400 text-white-200' onClick={() => deleteTodo(todo._id)}>Delete</button>
-                        <button  className='mt-4 mb-4 p-3 bg-green-500 text-white-200' onClick={() => updateTodo(todo._id, prompt('New description:', todo.description))}>
+                        <button  className='ml-6 mt-4 mb-4 p-3   border rounded-lg bg-yellow-400 text-white-200' onClick={() => deleteTodo(todo._id)}>Delete</button>
+                        <button  className='mt-4 mb-4 p-3 ml-4 border rounded-lg bg-green-500 text-white-200' onClick={() => updateTodo(todo._id, prompt('New description:', todo.description))}>
                             Update
-                        </button>
-                        <button  className='mt-4 mb-4 mr-6 p-3 bg-blue-600 text-white-200' onClick={() => toggleTodoStatus(todo._id, todo.completed)}>
+                        </button> 
+                        <button  className='mt-4 mb-4 mr-6 p-3 ml-4 border rounded-lg bg-blue-600 text-white-200' onClick={() => toggleTodoStatus(todo._id, todo.completed)}>
                             {todo.completed ? 'completed' : 'pending'}
                         </button>
                     </li>
